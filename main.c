@@ -12,6 +12,13 @@ void allouerTableauEntiersV2(int** pTab, int const taille)
   *pTab = (int*)calloc(taille, sizeof(int));
 }
 
+void allouerTableauEntiersV3(int** pTab, int* ptaille)
+{
+  printf("Donnez la taille du tablaeu");
+  scanf("%d", ptaille);
+  *pTab = (int*)calloc(*ptaille, sizeof(int));
+}
+
 void afficherTab(int* tab, int const taille)
 {
   if (tab!= NULL)
@@ -42,6 +49,11 @@ int main()
   free(tab);
   tab = NULL;
 
+  // test de la version 3
+  allouerTableauEntiersV3(&tab,&taille);
+  afficherTab(tab, taille);
+  free(tab);
+  tab = NULL;
 
 
   return 0;
