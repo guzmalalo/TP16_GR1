@@ -8,3 +8,7 @@ add_executable(EXO3 exo3.c)
 add_executable(EXO4 exo4.c)
 
 add_executable(EXO5 exo5.c)
+
+add_executable(EXO6 exo6.c)
+
+

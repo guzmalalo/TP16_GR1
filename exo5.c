@@ -78,9 +78,14 @@ int main()
     int ** tab = NULL;
     int nbL =2;
     int nbC =2;
+
+    int * p = &nbC;
+
+    int *** pm = &tab;
+
     // allocation de la matrice
     //tab = creerMatrice(&nbL, &nbC);
-    creerMatriceP(&tab, &nbL, &nbC);
+    creerMatriceP(, &nbL, &nbC);
     matriceAleatoire(tab, nbL, nbC);
     // affichage
     afficherMatrice(tab, nbL, nbC);
